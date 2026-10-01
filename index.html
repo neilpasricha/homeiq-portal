@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HomeIQ</title>
+<title>HomeIQ — the household record for your home</title>
+<meta name="description" content="HomeIQ is a free, private record of everything in your home that shows you what is coming: tasks due, warranties and renewals expiring, equipment getting old. HomeIQ Pro adds live shared lists, a house map with 3D, and AI document reading. Coming soon to the App Store.">
 <style>
   :root {
     color-scheme: light dark;
@@ -12,6 +13,9 @@
     --ink-secondary: #5c6763;
     --accent: #17362f;
     --card: #ffffff;
+    --rule: #e2ddd3;
+    --flag-bg: #fdf6e3;
+    --flag-ink: #6b4f1d;
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -20,47 +24,188 @@
       --ink-secondary: #a7b3ae;
       --accent: #9fc4b8;
       --card: #1c2b26;
+      --rule: #2c3d37;
+      --flag-bg: #2a2418;
+      --flag-ink: #e0c98a;
     }
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     background: var(--bg);
     color: var(--ink);
-    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    padding: 2rem 1.25rem 4rem;
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    padding: 3rem 1.25rem 4rem;
   }
-  main { max-width: 42rem; margin: 0 auto; }
-  h1 { font-size: 1.8rem; color: var(--accent); margin-bottom: 0.25rem; }
-  .updated { color: var(--ink-secondary); font-size: 0.9rem; margin-bottom: 2rem; }
-  section {
-    background: var(--card);
-    border-radius: 12px;
-    padding: 1.25rem 1.5rem;
+  main { max-width: 40rem; margin: 0 auto; }
+  h1 {
+    font-size: 2.1rem;
+    line-height: 1.25;
+    color: var(--accent);
+    letter-spacing: -0.02em;
     margin-bottom: 1rem;
   }
-  h2 { font-size: 1.1rem; margin-bottom: 0.5rem; }
-  nav { margin-bottom: 2rem; }
-  nav a, footer a { color: var(--accent); }
-  ul { list-style: none; }
-  li { margin-bottom: 0.75rem; }
-  footer { margin-top: 2.5rem; color: var(--ink-secondary); font-size: 0.9rem; }
+  .lede { font-size: 1.15rem; color: var(--ink-secondary); margin-bottom: 1.5rem; }
+  .cta { margin-bottom: 2.5rem; }
+  .soon {
+    display: inline-block;
+    border: 1.5px solid var(--accent);
+    color: var(--accent);
+    font-weight: 600;
+    padding: 0.5rem 1.1rem;
+    border-radius: 999px;
+  }
+  .cta p + p { margin-top: 0.75rem; color: var(--ink-secondary); font-size: 0.95rem; }
+  h2 { font-size: 1.05rem; letter-spacing: 0.02em; text-transform: uppercase; color: var(--ink-secondary); margin-bottom: 0.75rem; }
+  section { margin-bottom: 2.5rem; }
+  p + p, p + ul, ul + p { margin-top: 0.85rem; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+  .example {
+    border-left: 3px solid var(--accent);
+    padding-left: 1rem;
+    font-size: 1.05rem;
+  }
+  .example strong { display: block; }
+  ul { padding-left: 1.2rem; }
+  li { margin-bottom: 0.6rem; }
+  .price { font-size: 2rem; line-height: 1.3; color: var(--accent); font-weight: 600; letter-spacing: -0.02em; }
+  .price small { font-size: 1rem; font-weight: 400; color: var(--ink-secondary); letter-spacing: 0; }
+  .fine { font-size: 0.85rem; color: var(--ink-secondary); }
+  .flag {
+    background: var(--flag-bg);
+    color: var(--flag-ink);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    font-size: 0.95rem;
+  }
+  footer { border-top: 1px solid var(--rule); padding-top: 1.5rem; color: var(--ink-secondary); font-size: 0.9rem; }
+  footer p { margin-bottom: 0.75rem; }
+  a { color: var(--accent); }
+  footer nav a { margin-right: 1rem; }
 </style>
 </head>
 <body>
 <main>
-<h1>HomeIQ</h1>
-<p class="updated">The household record for your home.</p>
+
+<h1>Know what your house needs next.</h1>
+<p class="lede">
+  HomeIQ is a free, private record of everything in your home — and it reads
+  that record back to you: what is due, what is about to expire, and what is
+  getting old.
+</p>
+
+<div class="cta">
+  <p class="soon">Coming soon to the App Store</p>
+  <p>
+    Free to download. Questions before then? Email
+    <a href="mailto:neil@pasricha.ai">neil@pasricha.ai</a>.
+  </p>
+</div>
+
 <section>
-<h2>Legal</h2>
-<ul>
-<li><a href="./privacy.html">Privacy policy</a></li>
-<li><a href="./terms.html">Terms of service</a></li>
-</ul>
+  <p>
+    You add your water heater once, with the year it went in. From then on,
+    HomeIQ’s Tasks tab shows:
+  </p>
+  <p class="example">
+    <strong>Water heater</strong>
+    13 years old — 3 years past the typical 10-year life
+  </p>
+  <p>
+    Nobody told you that. It came from a date you typed once and a published
+    typical service life for that kind of equipment. That is the whole idea:
+    the record you keep should work for you, not just sit there.
+  </p>
 </section>
+
 <section>
-<h2>Support</h2>
-<p>Questions or problems? Email <a href="mailto:neil@pasricha.ai">neil@pasricha.ai</a>.</p>
+  <h2>The home record is free</h2>
+  <div class="card">
+    <p class="price">Free <small>with no time limit</small></p>
+    <ul>
+      <li>Appliances and systems, with make, model, serial number and install date</li>
+      <li>Documents — manuals, receipts, warranties, inspection reports — stored privately</li>
+      <li>Tasks, repeating upkeep, and a history of the work done</li>
+      <li>Warranty and renewal dates, shown as they come up</li>
+      <li>Costs, contractors, and an essentials card: the shutoffs, the breaker panel, utilities, insurance</li>
+      <li>Search, and a plain-text home summary you can share or keep</li>
+      <li>Everyone in your household, at no extra cost</li>
+    </ul>
+  </div>
 </section>
+
+<section>
+  <h2>HomeIQ Pro</h2>
+  <div class="card">
+    <p class="price">$4.99 <small>a month, or $39.99 a year</small></p>
+    <p><strong>New subscribers get the first month free.</strong> One subscription covers everyone in your home.</p>
+    <ul>
+      <li><strong>Shared lists</strong> that update live for everyone in the home — groceries, packing, a list of jobs.</li>
+      <li><strong>The house map:</strong> draw each floor, pin where things are — the water shutoff, the breaker panel — and see it in 3D.</li>
+      <li><strong>AI document reading:</strong> upload a seller’s packet, a receipt or an upgrade invoice, and HomeIQ proposes the appliances, purchases and past work it finds, each with the page it came from. It asks before any document goes to its AI provider, and nothing is added until you confirm it.</li>
+    </ul>
+    <p class="fine">
+      Sold through the App Store; Google Play comes later. The free month is an
+      App Store introductory offer for new subscribers. After it, Pro renews
+      automatically at your plan’s price unless you cancel at least 24 hours
+      before the free month ends, and then each month or year unless you cancel
+      at least 24 hours before the period ends. Cancel in your Apple ID
+      settings; you keep Pro until the end of the period you paid for. If Pro
+      ends, you lose nothing you made: shared lists and your map’s floors and
+      pins stay readable (the 3D view needs Pro), and records added from your
+      documents stay in your free record. Prices are in US dollars; the App
+      Store shows your local price. See the <a href="./terms.html#subscriptions">terms</a>.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>Free, without the catch</h2>
+  <p>
+    Many free home apps are paid for by contractor leads, so they have a stake
+    in whether you hire someone. HomeIQ doesn’t. There are no leads, no paid
+    rankings and no ads; HomeIQ is paid for by the people who choose Pro.
+  </p>
+  <p>
+    When you need a plumber, HomeIQ shows the ones you have saved first, then
+    opens Apple Maps or Google Maps with the trade and your city or ZIP code —
+    never your street address — and nobody pays for the click.
+  </p>
+</section>
+
+<section>
+  <h2>Where it stands</h2>
+  <div class="flag">
+    <p>
+      <strong>Built and working today:</strong> everything above — the free
+      record, service-life notes like the water heater’s, shared lists, the
+      house map and its 3D view, and document reading. HomeIQ is not in the App
+      Store yet; iPhone comes first, Android after.
+    </p>
+    <p>
+      <strong>Not built yet:</strong> phone notifications (today HomeIQ shows
+      what is due when you open it) and an assistant that answers questions
+      about your home.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <p>
+    Built by Neil Pasricha. Questions?
+    <a href="mailto:neil@pasricha.ai">neil@pasricha.ai</a> — a real person answers.
+  </p>
+  <nav aria-label="Site">
+    <a href="./support.html">Support</a>
+    <a href="./privacy.html">Privacy</a>
+    <a href="./terms.html">Terms</a>
+  </nav>
+</footer>
+
 </main>
 </body>
 </html>
