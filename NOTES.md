@@ -2,6 +2,24 @@
 
 ## 2026-10-11
 
+- App Store name correction: Apple rejected the exact HomeHQ name as already
+  used. The founder approved “HomeHQ: Your Home Headquarters” (30 characters),
+  and App Store Connect saved it with “The Headquarters of your Home” as
+  subtitle. The installed app and this portal remain HomeHQ.
+- Reviewed the complete nine-file portal diff: visible names/tagline and
+  current Pro support wording only; auth codes, links, deletion flow and CSS
+  remain intact. Legal pages are byte-identical to application outputs;
+  tracked HTML contains no HomeIQ brand text or former green colors.
+
+- Before the 1.1.1 launch, the founder restored the HomeHQ name everywhere,
+  with the exact tagline “The Headquarters of your Home”. All seven visible
+  pages and email/app links now use HomeHQ; the published homeiq-portal URL
+  remains stable so existing app/auth links continue to work. The App Store
+  name is just HomeHQ. Support now explicitly distinguishes free 2D/service
+  life from Pro 3D and names pets, vehicles and the expanded record limits.
+  Generated Terms and Privacy must match the new application outputs before
+  commit. No URL move: it would break links from already-distributed builds.
+
 - The founder replaced green with slate blue everywhere before HomeIQ 1.1.1
   build 29. Update every portal page in both color modes, including support,
   confirmation, app links, account deletion and legal pages. Keep links and
